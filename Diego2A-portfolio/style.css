@@ -1,30 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* Paleta de Cores */
 :root {
-    --cor-principal: #6E859F;
-    --cor-secundaria: #284260;
-    --cor-destaque: #C92BFC;
+  --cor-principal: #6E859F;
+  --cor-secundaria: #284260;
+  --cor-destaque: #C92BFC;
+  --cor-fundo: #f8f9fa;
+  --cor-texto: #333;
+  --cor-clara: #ffffff;
 }
 
+/* Reset e Corpo */
 body {
-    font-family: 'Chakra Petch', sans-serif;
-    color: var(--cor-principal);
+  font-family: 'Chakra Petch', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
+/* Títulos */
 h1, h2, h5 {
-    color: var(--cor-secundaria);
-    font-weight: 700;
+  color: var(--cor-secundaria);
+  font-weight: 700;
 }
 
-.lead, .btn-link {
-    color: var(--cor-destaque);
-    font-weight: 700;
+/* Subtítulo e Destaques */
+.lead {
+  color: var(--cor-destaque);
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
-a, .btn-link:hover {
-    color: var(--cor-principal)
+/* Botões e Links */
+a,
+.btn-link {
+  color: var(--cor-principal);
+  font-weight: 600;
+  text-decoration: none;
 }
 
-a:hover{
-    color: var(--cor-destaque);
+a:hover,
+.btn-link:hover {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+/* Cartões */
+.card {
+  border: none;
+  background-color: var(--cor-clara);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  color: var(--cor-secundaria);
+}
+
+.card-text {
+  color: var(--cor-principal);
+}
+
+/* Badges de habilidades */
+.badge {
+  background-color: var(--cor-principal);
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 0.5em 0.75em;
+  margin: 0.3em;
+  border-radius: 0.5em;
+}
+
+/* Footer */
+footer {
+  background-color: var(--cor-clara);
+  color: var(--cor-principal);
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+/* Container Header */
+header.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Responsividade extra */
+@media (max-width: 576px) {
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.4em 0.6em;
+  }
 }
